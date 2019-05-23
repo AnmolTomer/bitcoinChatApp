@@ -63,3 +63,21 @@ btn_go.addEventListener("click", (e)=>{
         })
     })//end handler
     //--------------------------------------------
+
+//----------------------------
+//Event listener for message submit (submit)
+    document.getElementById("messageForm").addEventListener('submit',(e)=>{
+        e.preventDefault()
+        // check if user is logged in..if ok then send msg else tell Please login if you wish to chat alert
+        if(sessionStorage.userName == undefined){
+            alert("Please login if you wish to chat.")
+        }else{
+            //*****COMMUNICATE NEW MESSAGE TO SERVER VIA WEBSOCKET*****
+            let txtArea_msg = document.getElementById('message');
+            socket.emit('msgObjectToServer', {userName: sessionStorage.userName, msg: txtArea_msg.value});
+            //clear textArea
+            txtArea_msg.value = "";
+        }
+
+    })
+//------------------------------------
