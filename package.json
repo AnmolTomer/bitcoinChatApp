@@ -1,0 +1,34 @@
+{
+  "name": "bitcoinchatapp",
+  "version": "1.0.0",
+  "description": "Chat application using Node, Express, Websockets, EJS & Mongo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnmolTomer/bitcoinChatApp.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Websockets",
+    "EJS",
+    "Mongo"
+  ],
+  "author": "Anmol Tomer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnmolTomer/bitcoinChatApp/issues"
+  },
+  "homepage": "https://github.com/AnmolTomer/bitcoinChatApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "mongodb": "^3.2.5",
+    "socket.io": "^2.2.0"
+  }
+}
